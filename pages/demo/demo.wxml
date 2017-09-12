@@ -1,0 +1,16 @@
+<!--pages/selectArea/selectArea.wxml-->
+<import src="../../components/cascaded-picker-view/cascaded-picker-view.wxml" />
+<import src="../../components/cascaded-picker/cascaded-picker.wxml" />
+
+<view class="container">
+    <view class="part">
+        <text class="caption">1、嵌入级联选择器：</text>
+        <template is="cascaded-picker-view" data="{{ data: areaPickerData }}" />
+    </view>
+
+    <view class="part">
+        <text class="caption">2、弹出级联选择器：</text>
+        <button bindtap="onOpenAreaPicker2Click">{{ selectedAreaText ? selectedAreaText : '[选择地区]' }}</button>
+        <template is="cascaded-picker" data="{{ data: areaPickerData2 }}" />
+    </view>
+</view>

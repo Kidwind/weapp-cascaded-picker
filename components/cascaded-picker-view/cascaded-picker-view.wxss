@@ -1,0 +1,8 @@
+.cascaded-picker-view {
+    height: 300rpx;
+    padding: 0 10rpx;
+    text-align: center;
+    font-size: 30rpx;
+    line-height: 68rpx;
+    color: black;
+}

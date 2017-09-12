@@ -1,0 +1,8 @@
+<template name="cascaded-picker-view">
+    <picker-view class="cascaded-picker-view" bindchange="{{ data.onChangeName }}" value="{{ data.selectIndexs }}">
+        <picker-view-column wx:for="{{ data.optionsGroups }}" wx:key="{{ index }}">
+            <view wx:if="{{ data.promptTexts[index] }}">{{ data.promptTexts[index] }}</view>
+            <view wx:for="{{ item }}">{{ item.text }}</view>
+        </picker-view-column>
+    </picker-view>
+</template>

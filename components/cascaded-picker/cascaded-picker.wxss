@@ -1,0 +1,33 @@
+@import '../cascaded-picker-view/cascaded-picker-view.wxss';
+
+.cascaded-picker {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    font-size: 30rpx;
+
+    box-shadow:0 -4rpx 6rpx #aaaaaa;
+}
+
+.cascaded-picker .header {
+    padding: 15rpx 10rpx;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 1rpx solid #f6f6f6;
+    color: #333;
+}
+
+.cascaded-picker .header .cancel, .cascaded-picker .header .confirm {
+    padding: 5rpx 10rpx;
+    float: left;
+}
+
+.cascaded-picker .header .confirm {
+    float: right;
+}
+
+.cascaded-picker .cascaded-picker-view {
+    height: 600rpx;
+}
