@@ -17,7 +17,7 @@ class CascadedPickerView {
      *     @param {Array=}  initValues             选择器初始值。
      *     @param {Function=}  loadOptionsMethod(parentValue, pickerIndex, callback)
      *                                             选择器选项数据加载方法，方法参数如下：
-     *                                             @param {any} parentValue 代表上级选择器的选择
+     *                                             @param {any} parentValue 代表上级选择器的选择值
      *                                             @param {number} pickerIndex 代表当前加载选项数据的选择器的索引
      *                                             @param {Function} callback 方法为数据载入完成后的回调方法，该方
      *                                             接收一个Array对象代表选项的集合。
