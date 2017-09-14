@@ -7,6 +7,8 @@
             <text class="confirm" bindtap="{{ data.onConfirmName }}">确定</text>
         </view>
 
-        <template is="cascaded-picker-view" data="{{ data: data }}" />
+        <view class="body">
+            <template is="cascaded-picker-view" data="{{ data: data }}" />
+        </view>
     </view>
 </template>

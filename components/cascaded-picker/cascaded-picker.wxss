@@ -28,6 +28,10 @@
     float: right;
 }
 
+.cascaded-picker .body {
+    background-color: #fff;
+}
+
 .cascaded-picker .cascaded-picker-view {
     height: 600rpx;
 }
