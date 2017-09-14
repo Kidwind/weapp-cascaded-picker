@@ -56,8 +56,9 @@ Page({
                 promptTexts: ['-省-', '-市-', '-区-'],   // 按索引位置针对性指定选择器的提示文本
                 pickerCount: 3,     // 初始的选择器数量
                 initValues: ['450000', '450100', '450101'],   // 初始的选择器值
-                loadOptionsMethod: (parentValue, pickerIndex, callback) => {    // 加载指定选择器选项集合的方法
+                loadOptionsMethod: (obj, parentValue, pickerIndex, callback) => {    // 加载指定选择器选项集合的方法
                     // 方法参数说明：
+                    // obj - 代表当前级联选择器对象。
                     // parentValue - 上一级选择器选定的项目的值，根据该值读取关联的数据。
                     // pickerIndex - 代表当前要加载选项数据的选择器的索引。
                     // callback - 数据加载完成后的回调方法，该方法接受一个代表选项集合的参数，选项集合中的选项需转换为 cascaded-picker 所识别的标准格式，即：

@@ -16,7 +16,7 @@ Page({
     },
 
     initAreaPicker: function() {
-        const loadOptionsMethod = (pv, index, callback) => {
+        const loadOptionsMethod = (obj, pv, index, callback) => {
             wx.showLoading({
                 title: '加载中...',
                 mask: true,
@@ -93,7 +93,7 @@ Page({
                     confirmText: '重试',
                     complete: (res) => {
                         if (res.confirm) {
-                            loadOptionsMethod(pv, index, callback);
+                            loadOptionsMethod(obj, pv, index, callback);
                         }
                     },
                 });

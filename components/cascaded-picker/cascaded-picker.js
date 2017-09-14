@@ -12,9 +12,10 @@ class CascadedPicker extends CascadedPickerView {
      *     @param {string=}  promptTexts           选择器的提示文本数组，按索引位置匹配相应的提示文本。
      *     @param {number=}  pickerCount           选择器的数量，如果为 null ，则自动根据联动情况动态生成选择器
      *     @param {Array=}  initValues             选择器初始值。
-     *     @param {Function=}  loadOptionsMethod(parentValue, pickerIndex, callback)
+     *     @param {Function=}  loadOptionsMethod(obj, parentValue, pickerIndex, callback)
      *                                             选择器选项数据加载方法，方法参数如下：
-     *                                             @param {any} parentValue 代表上级选择器的选择
+     *                                             @param {Object} obj 代表当前级联选择器对象
+     *                                             @param {any} parentValue 代表上级选择器的选择值
      *                                             @param {number} pickerIndex 代表当前加载选项数据的选择器的索引
      *                                             @param {Function} callback 方法为数据载入完成后的回调方法，该方
      *                                             接收一个Array对象代表选项的集合。
@@ -28,7 +29,7 @@ class CascadedPicker extends CascadedPickerView {
         promptTexts = null,
         pickerCount = null,
         initValues = null,
-        loadOptionsMethod = (parentValue, callback) => { callback([]); },
+        loadOptionsMethod = (obj, parentValue, pickerIndex, callback) => { callback([]); },
 
         onCancel = null,
         onConfirm = null,
