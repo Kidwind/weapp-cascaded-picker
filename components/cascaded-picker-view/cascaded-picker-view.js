@@ -450,6 +450,13 @@ class CascadedPickerView {
     }
 
     /**
+     * 获取指定索引的选择器的选项。
+     */
+    getPickerOptions(pickerIndex) {
+        return this._getOptionsGroup(pickerIndex);
+    }
+
+    /**
      * 销毁对象。
      */
     destroy() {
